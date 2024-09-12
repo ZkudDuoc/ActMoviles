@@ -1,0 +1,30 @@
+<ion-content>
+  <form (ngSubmit)="enviarFormulario()">
+    <ion-item>
+      <ion-label>Nombre: </ion-label>
+      <ion-input [(ngModel)]="cliente.nombre" name="nombre" required></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Apellido:</ion-label>
+      <ion-input [(ngModel)]="cliente.apellido" name="apellido" required></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Edad:</ion-label>
+      <ion-input type="number" [(ngModel)]="cliente.edad" name="edad" required></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Tipo de Entrada:</ion-label>
+      <ion-select [(ngModel)]="tipoEntrada" name="tipoEntrada">
+        <ion-select-option *ngFor="let tipo of tiposEntrada" [value]="tipo">{{ tipo }}</ion-select-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Cantidad:</ion-label>
+      <ion-input type="number" [(ngModel)]="cantidadEntradas" name="cantidadEntradas" required></ion-input>
+    </ion-item>
+
+    <ion-button expand="full" type="submit">Continuar</ion-button>
+  </form>
+</ion-content>

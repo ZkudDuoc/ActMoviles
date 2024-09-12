@@ -1,0 +1,15 @@
+<ion-content>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Resumen de Compra</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <p>Cliente: {{ cliente.nombre }} {{ cliente.apellido }}</p>
+      <p>Edad: {{ cliente.edad }}</p>
+      <p>Tipo de Entrada: {{ tipoEntrada }}</p>
+      <p>Cantidad: {{ cantidadEntradas }}</p>
+      <p>Descuento: {{ descuento * 100 }}%</p>
+      <p>Total a Pagar: {{ total | currency }}</p>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

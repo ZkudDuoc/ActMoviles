@@ -1,0 +1,20 @@
+<ion-header class="header">
+  <ion-toolbar >
+    <ion-title>Venta de Entradas</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="page-content">
+  <div *ngFor="let evento of eventos" class="event-card" (click)="selecEvento(evento)">
+    <div class="event-title">{{ evento.titulo }}</div>
+    <div class="event-description">{{ evento.descripcion }}</div>
+    <div class="event-date">{{ evento.fecha }}</div>
+    <div class="event-price">{{ evento.precio | currency }}</div>
+  </div>
+</ion-content>
+
+<ion-footer class="footer">
+  <ion-toolbar >
+    <div class="footer-text">© 2024 ZkudApp</div>
+  </ion-toolbar>
+</ion-footer>
