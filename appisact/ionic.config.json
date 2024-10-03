@@ -1,0 +1,7 @@
+{
+  "name": "appisact",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
